@@ -1,0 +1,17 @@
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: pod-fetcher
+spec:
+  # Adjust this to set the schedule
+  schedule: "0 0 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          serviceAccountName: cronjob-sa
+          containers:
+          - name: pod-fetcher
+            image: localhost:5000/fetch-pods:0.03
+          restartPolicy: OnFailure
