@@ -75,7 +75,7 @@ Check the status of the CronJob with the following command:
 kubectl get cronjobs
 ```
 
-### Step 7: Trigger a job
+### Step 6: Trigger a job
 
 To speed up, trigger a job to test it out.
 
@@ -83,7 +83,7 @@ To speed up, trigger a job to test it out.
 kubectl create job manual-test-pod-fetcher-01 --from=cronjob/pod-fetcher
 ```
 
-### Step 8: View the CronJob Logs
+### Step 7: View the CronJob Logs
 
 Once the CronJob has run, you can view the logs of the Job's Pod to see the
 output of the Python script:
