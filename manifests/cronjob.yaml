@@ -4,6 +4,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: pod-fetcher
+  namespace: default
 spec:
   # Adjust this to set the schedule
   schedule: "0 0 * * *"
