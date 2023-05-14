@@ -1,5 +1,5 @@
 ---
-# Replace `<container-registry>` with the path to your Container
+# Replace `<container-registry>` with the path to your Container image
 apiVersion: batch/v1
 kind: CronJob
 metadata:
