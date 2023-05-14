@@ -1,4 +1,5 @@
 ---
+# Replace `<container-registry>` with the path to your Container
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -13,5 +14,5 @@ spec:
           serviceAccountName: cronjob-sa
           containers:
           - name: pod-fetcher
-            image: localhost:5000/fetch-pods:0.03
+            image: <container-registry>/fetch-pods:latest
           restartPolicy: OnFailure
